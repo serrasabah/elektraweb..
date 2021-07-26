@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="description"
+        CONTENT="Elektra Otel Yönetim Sistemi her büyüklükteki otelin tüm departmanları ile birlikte entegre olarak yönetilmesini sağlayacak 28 farklı modülden oluşur.  ">
+    <title>Elektraweb Modülleri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .menu li {
+            /* padding: 1px; */
+            /* margin-left: 20px; */
+            margin: 5px;
+
+        }
+
+        .menu a {
+            font-size: 16px;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #444444;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            display: block;
+            padding: 10px;
+            /* border-left: 4px solid #d60f0fd6; */
+            width: 200px;
+            line-height: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                "Segoe UI Symbol", "Noto Color Emoji";
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .menu a:hover {
+
+            background-color: #d60f0fd6;
+
+            color: white
+        }
+
+
+        @media screen and (max-width: 1370px) {
+            #modülprg {
+                text-align: justify;
+                margin: auto;
+                margin-left: 2px;
+            }
+
+            .menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+
+            .menu li {
+                margin-left: 1px;
+            }
+
+            .menu a {
+                font-size: 12px;
+
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                border: 1px solid black;
+                display: block;
+                padding: 0px 0px 5px 5px;
+
+                width: 100px;
+                line-height: 17px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol", "Noto Color Emoji";
+            }
+        }
+
+
+        @media screen and (max-width: 800px) {
+            #modülprg {
+                text-align: justify;
+                margin: auto;
+                margin-left: 2px;
+            }
+
+            .menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+
+            .menu li {
+                margin-left: 1px;
+            }
+
+            .menu a {
+                font-size: 12px;
+
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                border: 1px solid black;
+                display: block;
+                padding: 0px 0px 5px 5px;
+
+                width: 80px;
+                line-height: 20px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol", "Noto Color Emoji";
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            #modülprg {
+                text-align: justify;
+                margin: auto;
+            }
+
+            .menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+
+            .menu li {
+                /* padding: 1px; */
+                /* margin-left: 20px; */
+                margin: 5px;
+
+            }
+
+            .menu a {
+                font-size: 16px;
+                /* margin-left: 20px; */
+                text-decoration: none;
+                color: black;
+                border: 1px solid black;
+                display: block;
+                padding: 10px;
+
+                width: 200px;
+                line-height: 25px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol", "Noto Color Emoji";
+            }
+
+            .menu a:hover {
+
+                background-color: #d60f0fd6;
+
+                color: white
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+        @media all and (max-width: 420px) {
+            #modülprg {
+                text-align: justify;
+                margin: auto;
+            }
+
+            .menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+
+            .menu li {
+                /* padding: 1px; */
+                /* margin-left: 20px; */
+                margin: 5px;
+
+            }
+
+            .menu a {
+                font-size: 16px;
+                /* margin-left: 20px; */
+                text-decoration: none;
+                color: black;
+                border: 1px solid black;
+                display: block;
+                padding: 10px;
+
+                width: 220px;
+                line-height: 25px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol", "Noto Color Emoji";
+            }
+
+            .menu a:hover {
+
+                background-color: #d60f0fd6;
+
+                color: white
+            }
+
+        }
+
+        @media all and (max-width: 380px) {
+            #modülprg {
+                text-align: justify;
+                margin: auto;
+            }
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menuAna") {
+                x.className += " responsive";
+            } else {
+                x.className = "menuAna";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="menuAna" id="ustMenu">
+        <a href="elektraweb.html">Elektraweb</a>
+        <a href="index.html" class="active">Bulut</a>
+        <a href="avantaj.html">Avantajlar</a>
+        <a href="moduller.html">Modüller</a>
+    
+        <a href="iletisim.html">İletişim</a>
+        <img id="logo" src="logo.png" alt="Elektraweb Logo">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+    </div>
+    <!--Dikey menü-->
+    <div id="ana_div">
+        <div class="row" style="margin-right:0px;">
+            <div class="col-md-2" id="div1">
+                <ul class="menu">
+                    <li style="width:auto;"><a href="#Ön_Büro_Programı">Ön Büro Programı</a></li>
+                    <li style="width:auto;"><a href="#Restorant_POS_Yönetimi">Restorant POS Yönetimi </a></li>
+                    <li><a href="#Stok_ve_Maliyet_Analizi">Stok ve Maliyet Analizi</a></li>
+                    <li><a href="#Muhasebe_Yönetimi">Muhasebe Yönetimi</a></li>
+                    <li><a href="#e-Fatura,e-Arşiv,e-Defter">e-Fatura, e-Arşiv, e-Defter</a></li>
+                    <li><a href="#Satın_Alma_Yönetimi">Satın Alma Yönetimi</a></li>
+                    <li style="width:auto;"><a href="#Demirbaş_ve_Amortisman_Yönetimi">Demirbaş ve Amortisman
+                            Yönetimi</a></li>
+                    <li style="width:auto;"><a href="#Elektraweb_İnsan_Kaynakları">Elektraweb İnsan Kaynakları</a></li>
+                    <li><a href="#Temassız_Misafir_Uygulamaları">Temassız Misafir Uygulamaları</a></li>
+                    <li><a href="#Kanal_Yönetimi">Kanal Yönetimi</a></li>
+                    <li><a href="#Online_Rezervasyon_Motoru">Online Rezervasyon Motoru</a></li>
+                    <li><a href="#Fiyat_Yönetimi">Fiyat Yönetimi</a></li>
+
+                    <li><a href="#Spa_ve_Spor_Salonu_Yönetimi">Spa ve Spor Salonu Yönetimi</a></li>
+                    <li><a href="#iSafe_İnternet_Güvenlik_ve_Loglama_Sistemi">iSafe İnternet Güvenlik ve Loglama
+                            Sistemi</a></li>
+                    <li><a href="#Kimlikokur_Kimlik_ve_Pasaport_Okuma">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+                    <li><a href="#CRM_ve_Misafir_İlişkileri">CRM ve Misafir İlişkileri</a></li>
+                    <li><a href="#Satış_Projeleri_ve_Banket_Yönetimi">Satış Projeleri ve Banket Yönetimi</a></li>
+                    <li><a href="#Sadakat_Yönetimi">Sadakat Yönetimi</a></li>
+                    <li><a href="#Misafir_Yorum_Sitelerinin_Entegrasyonu">Misafir Yorum Sitelerinin Entegrasyonu</a>
+                    </li>
+                    <li><a href="#Sistem_Entegrasyonları">Sistem Entegrasyonları</a></li>
+                    <li><a href="#Call_Center_&_Satış_CRM_Entegrasyonu">Call Center & Satış CRM Entegrasyonu</a></li>
+                    <li><a href="#Yurt_Yönetim_Programı">Yurt Yönetim Programı</a></li>
+                    <li><a href="#Devremülk_ve_Devre_Tatil_Yönetimi">Devremülk ve Devre Tatil Yönetimi</a></li>
+                    <li><a href="#Online_Paket_Sipariş_Yönetimi">Online Paket Sipariş Yönetimi</a></li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-10" id="Ön_Büro_Programı" style="background-color: #fff; width:auto;">
+                <img src=" onburo.gif" alt="onburo.gif" id="modülimg" class="img-fluid"
+                    style="width:auto; margin-top: 6px;">
+                <!-- <h1 class="anabaslık" style="text-align: left;">Elektraweb Ön Büro Modülü</h1> -->
+                <h1 id="übaslık1" style=" color: red;">Elektraweb Ön Büro Modülü</h1>
+                <p id="modülprg">
+                    <b>Elektraweb Web Tabanlı Otel Programı</b>
+                    sayesinde rezervasyon, resepsiyon, housekeeping, fatura, folyo, channel manager, online
+                    rezervasyon, emniyet
+                    kimlik bildirimi gibi işlemleri yapabilirsiniz.
+                    <br><br>
+                    “Günlük Durum Ekranı” ile otelinizin günlük durumunu bu ekran üzerinden kontrol edebilir ayrıca
+                    otelinizin
+                    doluluk, gelir, forecast, rezervasyonlar gibi bilgileri hem grafik hem de liste haline
+                    ulaşabilirsiniz.
+                    <br>
+
+
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/elektraweb-on-buro-programi/">Elektraweb</a>
+                </p>
+                <br><br><br>
+                <!--Elektraweb POS Restoran Yönetim Programı -->
+                <p id="Restorant_POS_Yönetimi">
+                    <img src="POS.gif" alt="Restorant_POS_Yönetimi.gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red;">Elektraweb POS Restoran Yönetim Programı</h1>
+                <p id="modülprg">
+                    <b>Elektraweb POS Restoran Yönetim Programı</b> ile restoranınızı her yerden yönetebilir,
+                    istediğiniz yöntemle
+                    hesabı alabilirsiniz. Masalarınızın güncel durumunu hem bilgisayarınızdan hem de telefonunuzdan
+                    takip edebilirsiniz.
+                    Ayrıca restorantınıza özgü "Digital Menü" yaratabilirsiniz.
+                    <br><br>
+
+                    Elektraweb bulutta çalışan otel yönetim sistemi sayesinde <strong>sıfır yatırım maliyet</strong> ile
+                    işlemlerinizi
+                    gerçekleştirebilirsiniz.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/elektraweb-pos/">Elektraweb</a>
+                </p>
+                </p>
+
+                <!--Stok ve Maliyet Analizi -->
+                <br><br><br>
+                <p id="Stok_ve_Maliyet_Analizi">
+                    <img src="stokvemaliyetanalizi.gif" alt="stokvemaliyetanalizi.gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red;">ETSWeb Stok ve Maliyet Analizi Programı</h1>
+                <p id="modülprg">
+                    işletmenizdeki stok hareketlerini görmenizi, alış ve satışlarınızı planlayabilmenizi,
+                    müşterilerinizin tüketim eğilimlerini tahmin etmenizi, personelinizin stokları kullanma şeklini
+                    analiz edebilmenizi ve nihayetinde hedefleriniz için öngörüde bulunabilmenizi sağlar.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/etsweb-stok-ve-maliyet-analizi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Muhasebe Yönetimi -->
+                <br><br><br>
+                <p id="Muhasebe_Yönetimi">
+                    <img src="stokvemaliyetanalizi.gif" alt="Muhasebe_Yönetimi.gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red;">Elektraweb Otel Muhasebe Yönetimi</h1>
+                <p id="modülprg">
+                    Otellerin ihtiyaçlarına göre özelleştirilmiş kapsamlı bir web tabanlı muhasebe yönetim sistemidir.
+                    Ön muhasebe ve genel
+                    muhasebe dışında işletmenin idari süreçlerinin tamamını yönetebilecek satınalma, demirbaş, personel,
+                    stok ve satış
+                    yönetimi modüllerine de sahiptir. Tamamen modüler olarak tasarlandığından ihtiyaç doğrultusunda
+                    istenilen modüller
+                    sonradan da eklenebilir
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/etsweb-muhasebe-yonetimi/">Elektraweb</a>
+                </p>
+                </p>
+
+
+                <!--e-fatura, e-arsiv,e-defter-->
+                <br><br><br>
+                <p id="e-Fatura,e-Arşiv,e-Defter">
+                    <img src="E_FATURA.gif" alt="e-Fatura,e-Arşiv,e-Defter.gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">DİJİTAL DÖNÜŞÜM e-FATURA, e-ARŞİV ve e-DEFTER
+                    İLE BAŞLAR</h1>
+                <p id="modülprg">
+                    <br>
+                    <b>Otelinizin “Dijital Dönüşüm” sürecinizi Elektra ile yönetebilirsiniz.</b>
+                    <br><br>
+                    e-Fatura, e-Defter ve e-Arşiv modülümüz ile finansal operasyonlarınızı yasaya uygun olarak
+                    kolaylıkla
+                    gerçekleştirebilirsiniz.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/e-fatura-e-arsiv-e-defter/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--satın alma yönetimi-->
+                <br><br><br>
+                <p id="Satın_Alma_Yönetimi">
+                    <img src="E_FATURA.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Elektraweb Satın Alma Modülü</h1>
+                <p id="modülprg">
+                    <br>
+                    <b>Elektraweb Satınalma Yönetimi,</b>
+                    departman talebinden siparişin teslimatına kadar ki tüm operasyonu takip ederek yönetilmesini
+                    sağlayan modüldür.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/etsweb-satin-alma-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Demirbaş ve Amortisman Yönetimi-->
+                <br><br><br>
+                <p id="Demirbaş_ve_Amortisman_Yönetimi">
+                    <img src="DEMIRBAS_slider.gif" alt="Demirbaş_ve_Amortisman_Yönetimi.gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Elektraweb Demirbaş ve Amortisman Yönetimi</h1>
+                <p id="modülprg">
+                    <br>
+                    <b>Elektraweb Demirbaş Programı</b>
+                    barkotlu el bilgisayarı ile sayım yapabilen, ürünlerin özelliklerine ve yerlerine göre barkod
+                    basabilen, garanti ve
+                    servis anlaşmalarını takip edebilen ve muhasebe ile entegre çalışan bir modüldür.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/etsweb-demirbas-ve-amortisman-yonetimi/">Elektraweb</a>
+
+
+                </p>
+                </p>
+
+                <!--Elektraweb İnsan Kaynakları-->
+                <br><br><br>
+                <p id="Elektraweb_İnsan_Kaynakları">
+                    <img src="insankaynakları.gif" alt="Elektraweb_İnsan_Kaynakları.gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">ElektraWeb İnsan Kaynakları Programı</h1>
+                <p id="modülprg">
+                    <br>
+                    <b>Daha İyi Planlama, Daha İyi Yönetim ve Daha Yüksek Performans..</b>
+                    <br>
+                    <strong>Elektraweb İK Programı,</strong> web tabanlı ve bulut yapıda olduğu için her yerden, her an
+                    programa erişebilirsiniz. Dünyanın en
+                    güvenli sunucularında barındırılmaktadır. Bu sayede yüksek hız ve güvenlik sağlar. Yedeklemeler
+                    otomatik yapılır.
+                    Üstelik herhangi bir donanıma ve ön kuruluma ihtiyaç duyulmadan, web üzerinden erişim
+                    sağlandığından, hemen kullanmaya
+                    başlayabilir ve çok ekonomik fiyatlarla küçük ölçekli şirketlerden binlerce kişilik holdinglere
+                    kadar pek çok işletme
+                    tarafından kullanılan <strong>Elektraweb Web Tabanlı İnsan Kaynakları Sistemi</strong>‘nin avantajlı
+                    dünyasından yararlanabilirsiniz.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/elektraweb-insan-kaynaklari/">Elektraweb</a>
+                </p>
+                </p>
+
+                <!--Temassız Misafir Uygulamaları-->
+                <br><br><br>
+                <p id="Temassız_Misafir_Uygulamaları">
+                    <img src="misafiruygulama.gif" alt="Temassız_Misafir_Uygulamaları.gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 33px;">ELEKTRA Temassız Misafir Uygulaması ile TEMAS
+                    YOK, KAZANÇ ÇOK</h1>
+                <p id="modülprg">
+                    <br>
+                    Sağlıklı Turizm Kriterleri uyarınca Covid-19 önlemlerini uygulayan otellerin iş yükünü azaltan,
+                    müşteri memnuniyetini
+                    arttıran ELEKTRA MİSAFİR UYGULAMASI ile restoran veya SPA rezervasyonu, Online check-in,
+                    yiyecek/içecek siparişi, oda
+                    temizliği, bell boy talebi gibi 24 farklı işlem için sosyal mesafe korunduğu gibi, sağlanan dijital
+                    hizmetlerle oteller
+                    için yeni kazançların kapıları da aralanıyor
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/elektra-otellerde-temassiz-misafir-uygulamalari/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Kanal Yönetimi-->
+                <br><br><br>
+                <p id="Kanal_Yönetimi">
+                    <img src="KANALYONETICISI.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;"
+                        alt="KANALYONETICISI.gif">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Elektraweb Channel Manager
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    ElektraWeb, yalnızca çevrimiçi kanalları (Booking.com, Expedia, Hotelbeds, HotelsPro vb.) Senkronize
+                    etmekle kalmayan,
+                    aynı zamanda oteldeki rezervasyonları alan entegre bir kanal yöneticisine sahiptir. Bu yüzden çok
+                    daha kolay ve daha
+                    etkilidir.
+                    ElektraWeb, doluluk bilgileri olan iki yönlü bir bağlantıya sahiptir ve fiyatlar kanallara
+                    gönderilir ve rezervasyonlar
+                    alınır.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/kanal-yonetimi/">Elektraweb</a>
+                </p>
+
+                </p>
+
+                <!--Online Rezervasyon Motoru-->
+                <br><br><br>
+                <p id="Online_Rezervasyon_Motoru">
+                    <img src="ONLINE_REZ_slider.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;"
+                        alt="Online_Rezervasyon_Motoru_gif">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Online Rezervasyon Motoru
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    ElektraWeb Online Rezervasyon Motoru
+                    Otelinizi Kendi Web Sitenizden Dünyaya Açın, Karlı Satın!
+                    ElektraWeb, otel misafirleri ve seyahat acentelerine yönelik, webde ve mobil olarak kullanılabilen,
+                    ön büroya
+                    entegre
+                    edilmiş bir online rezervasyon motoruna sahiptir. Grup ve zincir otellerde, merkezi rezervasyon
+                    sistemi(CRS), online
+                    rezervasyon motoru olarak kullanılabilir.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/online-rezervasyon-motoru/">Elektraweb</a>
+                </p>
+                </p>
+                </p>
+
+                <!--Fiyat Yönetimi-->
+                <br><br><br>
+                <p id="Fiyat_Yönetimi">
+                    <img src="FIYAT_YONTMI_slider.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;"
+                        alt="Fiyat_Yönetimi_gif">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Fiyat Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    ElektraWeb Online Rezervasyon Motoru
+                    Otelinizi Kendi Web Sitenizden Dünyaya Açın, Karlı Satın!
+                    ElektraWeb, otel misafirleri ve seyahat acentelerine yönelik, webde ve mobil olarak kullanılabilen,
+                    ön büroya
+                    entegre
+                    edilmiş bir online rezervasyon motoruna sahiptir. Grup ve zincir otellerde, merkezi rezervasyon
+                    sistemi(CRS), online
+                    rezervasyon motoru olarak kullanılabilir.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/fiyat-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Spa ve Spor Salonu Yönetimi-->
+                <br><br><br>
+                <p id="Spa_ve_Spor_Salonu_Yönetimi">
+                    <img src="spa.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;"
+                        alt="Spa_ve_Spor_Salonu_Yönetimi_Logo">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Spa ve Spor Salonu Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    ElektraWeb Online Rezervasyon Motoru
+                    Otelinizi Kendi Web Sitenizden Dünyaya Açın, Karlı Satın!
+                    ElektraWeb, otel misafirleri ve seyahat acentelerine yönelik, webde ve mobil olarak kullanılabilen,
+                    ön büroya
+                    entegre
+                    edilmiş bir online rezervasyon motoruna sahiptir. Grup ve zincir otellerde, merkezi rezervasyon
+                    sistemi(CRS), online
+                    rezervasyon motoru olarak kullanılabilir.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/elektraweb-spa/">Elektraweb</a>
+
+                </p>
+                </p>
+                <br><br>
+
+                <!--iSafe_İnternet_Güvenlik_ve_Loglama_Sistemi-->
+                <br><br><br>
+                <p id="iSafe_İnternet_Güvenlik_ve_Loglama_Sistemi">
+                    <img src="iSAFE_slider.gif" alt="" id="modülimg" class="img-fluid" style="width:auto;"
+                        alt="iSafe_İnternet_Güvenlik_ve_Loglama_Sistemi_Logo">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">iSafe İnternet Güvenlik ve Loglama Sistemi
+                </h1>
+                <p id="modülprg">
+                    5651 sayılı yasa ile internet kullanılan yerlerde kullanıma ait trafik bilgilerinin zaman (hash)
+                    damgası ile birlikte
+                    saklanması ve gizliliğinin sağlanması zorunlu hale getirilmiştir. iSafe, internet verilerinin 5651
+                    nolu yasada
+                    belirtildiği şekilde muhafazasını ve gizliliğini sağlayan, yazılım + donanım olarak sunulan bir
+                    hotspot çözümüdür.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/isafe-internet-guvenlik-ve-loglama-sistemi/">Elektraweb</a>
+
+                </p>
+                </p>
+                <br><br>
+
+                <!--Kimlikokur Kimlik ve Pasaport Okuma-->
+                <br><br><br>
+                <p id="Kimlikokur_Kimlik_ve_Pasaport_Okuma">
+                    <img src="KIMLIKOKUR_slider.gif" alt="Kimlikokur_Kimlik_ve_Pasaport_Okuma.gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Kimlikokur Kimlik ve Pasaport Okuma
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Kimlikokur, dünyadaki tüm kimlik ve pasaportları okuyup tanıyabilen, resim ve metin olarak saklayıp,
+                    windows ortamındaki
+                    tüm programlara aktarabilen bir yazılımdır.
+                    <br>
+                    Kimlikokur, otel ve hastane gibi girişte kimlik kaydı yapılması zorunlu tüm kurumlarda kayıt için
+                    harcanan zamanı en aza
+                    indirip, hatayı ortadan kaldırır; böylece müşteri memnuniyetinizi artırır ve hizmet kalitenizi
+                    yükseltir.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/kimlikokur-kimlik-ve-pasaport-okuma/">Elektraweb</a>
+                </p>
+                </p>
+                <br><br>
+
+                <!--Satış_Projeleri_ve_Banket_Yönetimi-->
+                <br><br><br>
+                <p id="Satış_Projeleri_ve_Banket_Yönetimi">
+                    <img src="SATIS_slider-1.gif" alt="Satış Projeleri ve Banket Yönetimi.gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Satış Projeleri ve Banket Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektraweb Satış Projeleri ve Banket Yönetimi ile, tüm satış projelerinizi tek ekrandan
+                    izleyebilirsiniz.
+
+                    – Kurum / Firma Görüşmeleri Takibi
+                    – Teklif ve Sözleşme Takibi
+                    – Toplu Rezervasyon ve Banket Satışları
+                    – Anlaşmalar
+                    – Rakip Analizi
+                    işlemleri rahatlıkla yapılabilir
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/banket-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+                <br><br>
+
+                <!--Sadakat_Yönetimi-->
+                <br><br><br>
+                <p id="Sadakat_Yönetimi">
+                    <img src="sadakat_slider.gif" alt="Sadakat Yönetimi gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Sadakat Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Misafirlerinizin tekrar geliş sayısını arttırmak ve onları daha yakından tanımak için Sadakat
+                    Yönetimi ile kampanyalar
+                    düzenleyebilir ve puan kazanmalarını sağlayabilirsiniz. Misafirlerin kazanacakları puanlar bir
+                    sonraki tatilleri için
+                    yeniden sizi tercih etmeleri için etken olacaktır.
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/sadakat-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Misafir Yorum Sitelerinin Entegrasyonu-->
+                <br><br><br>
+                <p id="Misafir_Yorum_Sitelerinin_Entegrasyonu">
+                    <img src="MISAFIR_YORUM_slider.gif" alt="Misafir Yorum Sitelerinin Entegrasyonu .gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Misafir Yorum Sitelerinin Entegrasyonu
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektraweb Misafir Yorum Sitelerinin Entegrasyonu
+
+                    Aylık 260 milyon tekil kullanıcıya sahip olan, dünyanın en büyük seyahat sitesi TripAdvisor’dan
+                    otelinize direkt link
+                    alır, hem satışlarınızı artırır hem de müşterilerinizin otelliniz hakkında yorum ve tanıtım yazıları
+                    yazmasına yardımcı
+                    olursunuz.
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/misafir-yorum-sitelerinin-entegrasyonu/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Sistem_Entegrasyonları-->
+                <br><br><br>
+                <p id="Sistem_Entegrasyonları">
+                    <img src="SISTEMENTGRSYN_slider.gif" alt="Sistem Entegrasyonları .gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Sistem Entegrasyonları
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektraweb Sistem Entegrasyonları
+
+                    Elektraweb Otel Programı, sistem entegrasyonları sayesinde 3. parti sistemlerle entegre çalışır.
+                    – Kapı Kilit : Amadeus, Kale, Adel, Makfa, Netflock, Somkart, BTlock, Brasco, ETS
+
+                    – Santral: Karel, Alcatel, Nec, Telesis, Siemens, Samsung, Miwa, Mitel, Meridyen
+
+                    – Enerji: Sistem içinde kullanılan klimalar ve aydınlatma sistemleri ile entegre çalışır
+
+                    – IP TV: Vestel, Arçelik- Acente: Sejour
+
+                    – Pay TV: Playroom, Alcod
+
+                    – Acente: Sejour
+
+                    – Turnike: Sistem içinde kullanılan kart okuyucular ile entegre çalışır
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/sistem-entegrasyonlari/">Elektraweb</a>
+
+
+
+                </p>
+                </p>
+
+                <!--Call Center & Satış CRM Entegrasyonu-->
+                <br><br><br>
+                <p id="Call_Center_&_Satış_CRM_Entegrasyonu">
+                    <img src="SISTEMENTGRSYN_slider.gif" alt="Call Center & Satış CRM Entegrasyonu .gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Call Center & Satış CRM Entegrasyonu
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektra Otel Programı Santral entegrasyonu ile çağrı merkezine gelen talepler kayıt altına alınır.
+                    Rezervasyon
+                    gerçekleştiğinde misafir profili ile birleştirilir. Böylece gelen çağrıları misafirin adı ile
+                    karşılar, tüm geçmiş arama
+                    ve rezervasyon bilgilerini görerek misafiri yönlendirir ve tüm süreci tek bir program üzerinden
+                    yönetmiş olursunuz
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/call-center-satis-crm-entegrasyonu/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <!--Yurt_Yönetim_Programı-->
+                <br><br><br>
+                <p id="Yurt_Yönetim_Programı">
+                    <img src="CALLCENTER_slider.gif" alt="Yurt Yönetim Programı .gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Yurt Yönetim Programı
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektra Otel Programı Santral entegrasyonu ile çağrı merkezine gelen talepler kayıt altına alınır.
+                    Rezervasyon
+                    gerçekleştiğinde misafir profili ile birleştirilir. Böylece gelen çağrıları misafirin adı ile
+                    karşılar, tüm geçmiş
+                    arama
+                    ve rezervasyon bilgilerini görerek misafiri yönlendirir ve tüm süreci tek bir program üzerinden
+                    yönetmiş olursunuz
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/yurt-yonetim-programi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+
+                <!--Devremülk_ve_Devre_Tatil_Yönetimi-->
+                <br><br><br>
+                <p id="Devremülk_ve_Devre_Tatil_Yönetimi">
+                    <img src="DEVREMULK_slider.gif" alt="Devremülk ve Devre Tatil Yönetimi .gif" id="modülimg"
+                        class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Devremülk ve Devre Tatil Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Elektra Otel Programı Santral entegrasyonu ile çağrı merkezine gelen talepler kayıt altına alınır.
+                    Rezervasyon
+                    gerçekleştiğinde misafir profili ile birleştirilir. Böylece gelen çağrıları misafirin adı ile
+                    karşılar, tüm geçmiş
+                    arama
+                    ve rezervasyon bilgilerini görerek misafiri yönlendirir ve tüm süreci tek bir program üzerinden
+                    yönetmiş olursunuz
+
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/devremulk-ve-devre-tatil-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+
+
+                <!--Online_Paket_Sipariş_Yönetimi-->
+                <br><br><br>
+                <p id="Online_Paket_Sipariş_Yönetimi">
+                    <img src="elektrawebbisiparis_landinpage.jpg.webp" alt="Online Paket Sipariş Yönetimi .gif"
+                        id="modülimg" class="img-fluid" style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">Online Paket Sipariş Yönetimi
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    BİSİPARİS.COM
+                    restoran, kafe, klüp, plaj veya sosyal tesis gibi ağırlama sektöründe çalışan işletmeler için
+                    geliştirilmiş
+                    en kapsamlı dijital menü, üyelik ve online satış sistemidir.
+
+                    Bisiparis.com ile dakikalar içinde kendi internet adresinizde online satış sisteminizi açıp
+                    müşterilerinizi başkasıyla paylaşmak zorunda kalmadan
+                    komisyon ödemeden satışa başlayabilirsiniz
+
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/online-paket-siparis-yonetimi/">Elektraweb</a>
+
+                </p>
+                </p>
+                <!--CRM ve Misafir İlişkileri-->
+                <br><br><br>
+                <p id="CRM_ve_Misafir_İlişkileri">
+                    <img src="crm.png" alt="CRM ve Misafir İlişkileri .gif" id="modülimg" class="img-fluid"
+                        style="width:auto;">
+                <h1 id="übaslık1" style=" color: red; font-size: 35px;">CRM ve Misafir İlişkileri
+                </h1>
+                <p id="modülprg">
+                    <br>
+                    Girilen tüm istek ve şikayetler otomatik görev yönetimine dahil olur.
+                    İşin tanımına göre, bölümü, yetkilisi, önemi ve beklenen bitiş süresi belirlenir.
+                    İş, ilgili birimin ekranına veya mobil cihazına düşer. Çağrıyı alan görevli ‘göreve başla’ tuşuna
+                    basarak başlar ve
+                    bittiğinde ise ‘tamamla’ diyerek bitirir.
+                    Eğer iş planlanan ve/veya max zaman diliminde bitmez ise otomatik bir üste mesaj gider.
+                    Misafir ile ilgili olan işlemler rezervasyon kartı içerisinden de takip edilir. Hatta istenirse
+                    check-in, check-out,
+                    folyo ve faturalama işlemleri esnasında otomatik hatırlatma yapar.
+                    VIP, setup ve ön ödeme kontrol gibi işlemler böylece hem hatırlatma hem de ilgili bölüme bir görev
+                    olarak
+                    tanımlanmış
+                    olur.
+                    <br>
+                    Detaylı bilgi için: <a
+                        href="https://www.elektraweb.com/otel-yazilimi/crm-ve-misafir-iliskileri/">Elektraweb</a>
+
+                </p>
+                </p>
+
+                <br><br>
+            </div>
+        </div>
+
+        <div class="btnToTop">
+            <button>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px"
+                    viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+                    xml:space="preserve">
+                    <g>
+                        <path
+                            d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285 C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854 c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848 c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566 C284.929,199.378,283.984,197.188,282.082,195.285z" />
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+        <script src="./script.js">
+            const btnToTop = document.querySelector('.btnToTop');
+
+            // 1. window.scrollTo()
+            // btnToTop.addEventListener('click', () => {
+            //   window.scrollTo(0, 0);
+            // })
+
+            // 2. window.scroll()
+            // btnToTop.addEventListener('click', () => {
+            //   window.scroll({
+            //     top: 0,
+            //     behavior: 'smooth'
+            //   })
+            // })
+
+            // 3. document.documentElement.scrollTop()
+            // btnToTop.addEventListener('click', () => {
+            //   document.documentElement.scrollTop = 0;
+            // })
+
+            // 4. document.documentElement.scrollIntoView()
+            btnToTop.addEventListener('click', () => {
+                document.documentElement.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
+        </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

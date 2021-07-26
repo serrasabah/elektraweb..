@@ -1,0 +1,1081 @@
+/* menü genel özellikleri */
+.menuAna {
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+/* menü içindeki linklerin özellikleri */
+.menuAna a {
+  float: left;
+  display: block;
+  color: #444444;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* linklerin üzerlerine gelindiğindeki halleri */
+.menuAna a:hover {
+  text-decoration: none;
+  background-color: #e30d18;
+  color: white;
+}
+
+/* menü düğmesini gizliyoruz */
+.menuAna .icon {
+  display: none;
+}
+
+/* menü ikonunun görünümü */
+.menuAna .icon div {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+/* Genişlik 800px altına düştüğünde ilk eleman haricindekiler gizlensin, menü ikonu ise görünsün */
+@media screen and (max-width: 800px) {
+  .menuAna a:not(:first-child) {
+    display: none;
+  }
+
+  .menuAna a.icon {
+    float: right;
+    display: block;
+  }
+
+  .menuAna.responsive {
+    position: relative;
+  }
+
+  .menuAna.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menuAna.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* responsive sınıfı, javascript ile menüye uygulanacak (ikona tıklandığında), böylece küçük ekranlarda menü dikey hale gelecek. */
+@media screen and (max-width: 600px) {
+  .menuAna.responsive {
+    position: relative;
+  }
+
+  .menuAna.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menuAna.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+#logo {
+  float: right;
+  width: 160px;
+  margin-right: 100px;
+}
+
+.menuAna #marka {
+  margin-bottom: 20px;
+  float: right; /*içinde bulunduğu divin sağında olsun diyorum*/
+}
+@media screen and (max-width: 800px) {
+  #logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+}
+.anabaslık {
+  padding: 40px;
+  text-align: center;
+  color: #e30d18;
+  margin-top: 20px;
+}
+
+.yukseklik {
+  width: 70%;
+  height: 100%;
+  margin-top: 30px;
+}
+.yukseklik {
+  width: 70%;
+  height: 100%;
+  margin-top: 30px;
+}
+.buluttanım {
+  margin: 30px;
+  text-align: justify;
+}
+.tanımbaslık {
+  margin-bottom: 20px;
+  margin: 30px;
+}
+@media only screen and(min-width:800px) {
+  .yukseklik {
+    width: 60%;
+    height: 100%;
+    margin-top: 30px;
+  }
+  .buluttanım {
+    margin: 20px;
+    /* font-size: small; */
+    text-align: justify;
+  }
+  .tanımbaslık {
+    margin-bottom: 20px;
+    margin: 30px;
+  }
+}
+
+.yukseklik1 {
+  margin: 0px 80px 20px 80px;
+  width: 70%;
+  height: 100%;
+}
+.buluttanım1 {
+  margin-top: 80px;
+}
+#servis {
+  width: 700px;
+  float: right;
+  height: 350px;
+  margin-right: 20px;
+}
+/*nedir.html
+  başlıca bulut sistemleri: resim yazı yanyana*/
+#servisresim {
+  width: 550px;
+  height: 320px;
+  margin-left: 100px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+}
+
+/*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+.üst img {
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 220px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+/*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+.üst {
+  text-align: center;
+  margin-left: 70px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 100px;
+}
+/*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+.üstic {
+  margin-left: 5px;
+  position: absolute;
+  top: 270px;
+  left: 0px;
+  width: 100%;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  overflow: hidden;
+  display: inline-block;
+}
+/*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+.üstic h1 {
+  color: black;
+  font-size: x-large;
+}
+/*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+.üstic p {
+  color: black;
+  text-align: justify;
+  width: 350px;
+  height: 300px;
+  margin-left: 24px;
+  margin-top: 5px;
+}
+
+/*.üstdetay {
+  background-color: #f9f9f9;
+  margin-top: 30px;
+  width: 100%;
+}
+.üstdetay h1 {
+  margin-left: 150px;
+}
+.üstdetaydevam {
+  float: right;
+  width: 1200px;
+}*/
+
+/*üstünlükler.html
+  İki div yanyana yazı olarak yapıldı. sayfa küçülünce kötü gözüküyor*/
+#ana_div {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 900px;
+
+  margin-right: auto;
+  margin-left: auto;
+  /* background-color: #f9f9f9; */
+}
+
+.div {
+  padding-top: 10px;
+  float: left;
+  display: inline-block;
+  height: 380px;
+  width: 600px;
+  margin: 15px;
+  color: black;
+  text-align: justify;
+}
+.altbaslık {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  padding: 18px;
+  text-align: left;
+  color: #e30d18;
+  font-size: 28px;
+}
+/*modü.css*/
+
+/*li {
+  padding: 10px;
+}*/
+
+/*Giflerin resim ayarı*/
+
+/* @media all and (max-width: 780px) {
+  .anadiv {
+    margin-left: 50px;
+    height: 800px;
+    text-align: left;
+  }
+
+  #modülprg {
+    text-align: justify;
+    margin-left: 150px;
+    /* margin-right: 100px; 
+  }
+} */
+
+/*modül.html paragraf ayarları*/
+.anadiv {
+  margin-left: 20px;
+  height: 800px;
+  text-align: left;
+}
+
+#modülprg {
+  text-align: justify;
+  margin-right: 230px;
+}
+/*iletişim linkleri: linkedin, youtube, instagram*/
+
+/* @media all and (max-width: 420px) {
+  .box {
+    width: 40%;
+    padding: 10px;
+    text-align: left;
+    margin-right: 250px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  /*iletişim linkleri: linkedin, youtube, instagram
+  .box .iletisimli {
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+    list-style: none;
+  }
+  /*iletişim linkleri: linkedin, youtube, instagram
+  .box .iletisimli .iletisima {
+    color: black;
+    font-size: 20px;
+  }
+} */
+
+.iletisimbilgileri {
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+  margin: auto;
+}
+
+/*En
+  Kapsamlı
+  Veri
+  Tabanlı
+  ve
+  Bulutta
+  Çalışan
+  Otel
+  Yönetimi
+  Sistemi
+  */
+/*nedir.html
+  Bulut Teknolojisi
+  resimler yuvarlak halde altları yazılı*/
+.dis {
+  text-align: center;
+  margin-left: 170px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+/*nedir.html
+  Bulut Teknolojisi
+  resimler yuvarlak halde altları yazılı*/
+.ic {
+  margin-left: 5px;
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  width: 100%;
+
+  opacity: 0.6;
+
+  overflow: hidden;
+  display: inline-block;
+}
+/*nedir.html
+  Bulut Teknolojisi
+  resimler yuvarlak halde altları yazılı*/
+.ic a {
+  color: black;
+  font-size: 25px;
+}
+/*nedir.html
+  Bulut Teknolojisi
+  resimler yuvarlak halde altları yazılı*/
+.dis img {
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.modelmenu {
+  padding: 10px;
+}
+.modelmenu .modela {
+  margin-left: 20px;
+}
+.modelmenu a {
+  color: black;
+  text-decoration: none;
+}
+a.modula {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+#div1.col-md-3 {
+  padding: 20px;
+  margin-left: 50px;
+}
+
+@media all and (max-width: 780px) {
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst img {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 170px;
+    margin-right: 10px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst {
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic {
+    margin-left: 5px;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    overflow: hidden;
+    display: inline-block;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic h1 {
+    color: black;
+    font-size: x-large;
+    margin-left: 170px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic p {
+    color: black;
+    text-align: justify;
+    width: 350px;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 170px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst img {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 20px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic {
+    margin-left: 5px;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    overflow: hidden;
+    display: inline-block;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic h1 {
+    color: black;
+    font-size: x-large;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic p {
+    color: black;
+    text-align: justify;
+    width: 350px;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst img {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 10px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic {
+    margin-left: 5px;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    overflow: hidden;
+    display: inline-block;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic h1 {
+    color: black;
+    font-size: x-large;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic p {
+    color: black;
+    text-align: justify;
+    width: 350px;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+}
+@media all and (max-width: 380px) {
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst img {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 1px;
+    margin-right: 5px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var*/
+  .üst {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic {
+    margin-left: 5px;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    overflow: hidden;
+    display: inline-block;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic h1 {
+    color: black;
+    font-size: x-large;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /*üstünlükler.html
+Bulut bilişimin avantajları
+resimler yanyana kare halde altlarında yazı var
+yazı kısmı*/
+  .üstic p {
+    color: black;
+    text-align: justify;
+    width: 350px;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-right: 8px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  #modülprg {
+    text-align: justify;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 420px) {
+  #modülprg {
+    text-align: justify;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 380px) {
+  #modülprg {
+    text-align: justify;
+    margin: auto;
+  }
+}
+
+.anaitem {
+  padding: 15px;
+  height: 100%;
+}
+hr {
+  margin: 30px 0;
+  border-top: 1px solid #ddd;
+}
+/* summary::marker {
+  content: none;
+} */
+
+details.item {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  transition: 300ms all;
+  margin-left: 25px;
+}
+
+details.item summary {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+details.item .item-content {
+  padding: 15px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+details[open].item {
+  border-color: black;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* details.item summary.detaybaslık {
+  color: black;
+} */
+/* .buton {
+  margin: 10px;
+  text-align: center;
+}
+
+.buton .abuton {
+  color: black;
+  text-decoration: none;
+} */
+
+details.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+details.dropdown summary {
+  background-color: #eee;
+  border-radius: 3px;
+  color: #999;
+  height: 40;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+details.dropdown summary a {
+  color: #999;
+  text-decoration: none;
+}
+details.dropdown summary a :hover {
+  background-color: #f8f8f8;
+}
+
+.buluttanım #li {
+  list-style-type: none;
+  font-size: 16px;
+  word-spacing: normal;
+}
+
+.buluttanım #li .e_p_a .iça {
+  text-decoration: none;
+  color: #e30d18;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .buluttanım #li .e_p_a .iça {
+    text-decoration: none;
+    color: #e30d18;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+}
+.slider {
+  overflow: hidden;
+  margin: 20px;
+}
+.slider ul.slider_liste li {
+  font-size: 0;
+  width: 100%;
+  float: left;
+}
+
+.slider ul.slider_liste li a img {
+  width: 100%;
+}
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  /* transition: background-color 0.3s ease; */
+}
+.active {
+  background-color: #eeeeee;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-duration: 6s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+details.dropdown1 {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+details.dropdown1 summary {
+  background-color: #eee;
+  border-radius: 3px;
+  color: #999;
+  height: 40;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 680px;
+  margin-bottom: 5px;
+}
+
+details.dropdown1 summary a {
+  color: #999;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 770px) {
+  details.dropdown1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  details.dropdown1 summary {
+    background-color: #eee;
+    border-radius: 3px;
+    color: #999;
+    height: 40;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-bottom: 5px;
+  }
+  details.dropdown1 summary a {
+    color: #999;
+    text-decoration: none;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  details.dropdown1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  details.dropdown1 summary {
+    background-color: #eee;
+    border-radius: 3px;
+    color: #999;
+    height: 40;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 130px;
+    margin-bottom: 5px;
+  }
+  details.dropdown1 summary a {
+    color: #999;
+    text-decoration: none;
+    margin: auto;
+  }
+}
+a.iça {
+  width: 270px;
+  box-sizing: 200px;
+}
+/* .buluttanım #li .e_p_a1 .pe {
+  width: 270px;
+} */
+
+.buluttanım #li {
+  list-style-type: none;
+  font-size: 16px;
+  word-spacing: normal;
+}
+
+.buluttanım #li .e_p_a1 .iça {
+  text-align: left;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e30d18;
+  font-size: 14px;
+  padding: 0;
+  /* background-color: rgb(240, 240, 240); */
+  width: 270px;
+}
+
+.buluttanım #li .e_p_a1 :hover {
+  background-color: #e30d18;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .buluttanım #li .e_p_a1 .iça {
+    text-align: left;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e30d18;
+    font-size: 14px;
+    padding: 0;
+    /* background-color: rgb(240, 240, 240); */
+    width: 180px;
+  }
+}
+.rox .col-md-3 #div8 {
+  box-sizing: 200px;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 23px;
+  margin-left: 10px;
+}
+/* 
+li a :hover {
+  background-color: #e30d18;
+  color: white;
+  display: inline-block;
+} */
+
+.btnToTop svg {
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+  border-radius: 7px;
+  background: #6e6e6e;
+  fill: #c2c2c2;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btnToTop svg:hover {
+  background: #222222;
+  fill: #d1d1d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
