@@ -1,6 +1,6 @@
 var i=0;
 var images=[];
-var time = 2000;
+var time = 3000;
 
 images[0]='slide.webp';
 images[1]='slide1.webp';
